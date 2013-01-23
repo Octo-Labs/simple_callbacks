@@ -33,23 +33,23 @@ module AWS
         # version that runs a run_calbacks block and then delegates
         # to the origin method.
         update_without_callbacks = instance_method(:update)
-        define_method :update do
-          run_callbacks(:update){ update_without_callbacks.bind(self).() }
+        define_method :update do |*args|
+          run_callbacks(:update){ update_without_callbacks.bind(self).(*args) }
         end
 
         create_without_callbacks = instance_method(:create)
-        define_method :create do
-          run_callbacks(:create){ create_without_callbacks.bind(self).() }
+        define_method :create do |*args|
+          run_callbacks(:create){ create_without_callbacks.bind(self).(*args) }
         end
 
         save_without_callbacks = instance_method(:save)
-        define_method :save do
-          run_callbacks(:save){ save_without_callbacks.bind(self).() }
+        define_method :save do |*args|
+          run_callbacks(:save){ save_without_callbacks.bind(self).(*args) }
         end
 
         destroy_without_callbacks = instance_method(:destroy)
-        define_method :destroy do
-          run_callbacks(:destroy){ destroy_without_callbacks.bind(self).() }
+        define_method :destroy do |*args|
+          run_callbacks(:destroy){ destroy_without_callbacks.bind(self).(*args) }
         end
       end
 

@@ -125,7 +125,7 @@ describe 'model validations' do
     
      
     it "should work" do
-      pp (Event.methods - Kernel.methods).sort
+      #pp (Event.methods - Kernel.methods).sort
       e = Event.new :name => "test"
       e.should_receive(:test_func)
       e.save
