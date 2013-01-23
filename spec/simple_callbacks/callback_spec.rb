@@ -9,7 +9,7 @@ describe 'model validations' do
     klass.string_attr :name
     klass.create_domain
     klass.each{|u| u.destroy }
-    sleep(2)
+    #sleep(2)
   end
 
   describe 'validation callbacks' do
