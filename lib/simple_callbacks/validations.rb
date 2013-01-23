@@ -1,3 +1,4 @@
+require 'aws/record/validations'
 module AWS
   module Record
     module Validations

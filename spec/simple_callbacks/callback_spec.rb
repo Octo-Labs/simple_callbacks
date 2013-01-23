@@ -112,4 +112,25 @@ describe 'model validations' do
 
   end
 
+  describe "in a model" do
+    class Event < AWS::Record::Model
+      string_attr :name
+      before_validation :test_func
+    end
+
+    before(:each) do
+      Event.create_domain
+      Event.each{|u| u.destroy }
+    end
+    
+     
+    it "should work" do
+      pp (Event.methods - Kernel.methods).sort
+      e = Event.new :name => "test"
+      e.should_receive(:test_func)
+      e.save
+    end
+
+  end
+  
 end
