@@ -2,6 +2,10 @@
 
 TODO: Write a gem description
 
+[![Gem Version](https://badge.fury.io/rb/simple_callbacks.png)](http://badge.fury.io/rb/simple_callbacks)
+[![Code Climate](https://codeclimate.com/repos/52f5dd976956807af900801a/badges/8bfe8f01326d9e31874c/gpa.png)](https://codeclimate.com/repos/52f5dd976956807af900801a/feed)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
